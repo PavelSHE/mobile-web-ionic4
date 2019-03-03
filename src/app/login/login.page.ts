@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from "src/models/user"
 import { NavController, ToastController } from '@ionic/angular';
-import { AngularFireAuth } from "@angular/fire";
+import { AngularFireAuth } from "angularfire2/auth";
 
 @Component({
   selector: 'app-login',
