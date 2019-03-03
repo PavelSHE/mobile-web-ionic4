@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 
 import { RegisterPage } from './register.page';
 
+import { AngularFireAuthModule} from "angularfire2/auth";
+
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +21,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    AngularFireAuthModule,
     RouterModule.forChild(routes)
   ],
   declarations: [RegisterPage]
