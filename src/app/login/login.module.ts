@@ -9,6 +9,7 @@ import { LoginPage } from './login.page';
 
 import { AngularFireAuthModule } from "angularfire2/auth";
 
+
 const routes: Routes = [
   {
     path: '',

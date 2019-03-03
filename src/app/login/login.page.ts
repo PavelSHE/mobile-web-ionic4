@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from "src/models/user"
 import { NavController, ToastController } from '@ionic/angular';
-import { AngularFireAuth } from "angularfire2/auth";
+import { AngularFireAuth } from "@angular/fire";
 
 @Component({
   selector: 'app-login',
@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
 
   async login(user: User) {
     try {
-      const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email,user.password);
+      const result = await this.afAuth.auth.signInWithEmailAndPassword(user.email, user.password);
       this.showToast("User " + result.user.email + " logged in successfully");
       this.navCtrl.navigateForward("home");
     } catch (error) {
