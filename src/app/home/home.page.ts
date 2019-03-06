@@ -12,11 +12,10 @@ import { AngularFireAuth } from "angularfire2/auth";
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  //box = { } as CottonSugarBox;
   data: Observable<any[]>;
   ref: AngularFireList<any>;
   dataPath: string;
-  boxes : [];
+  boxes = null;
 
   constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private alertCtrl: AlertController, private platform: Platform, public navCtrl: NavController) {
     //this.box.id = "bla1";
@@ -43,7 +42,13 @@ export class HomePage {
   }
   
   showBoxes(data){
-    this.boxes = data;
+    data.forEach(element => {
+      this.boxes.push(element);
+
+      this.boxes[this.boxes.length-1].registered1 = new Date (this.boxes[this.boxes.length-1].registered * 1000);
+    });
+    //this.boxes = data;
+
     // Object.keys(data).map(function(key, index) {
     //   data[key] *= 2;
     //});
@@ -62,7 +67,7 @@ export class HomePage {
   }
 
   navigateToBoxLogs(_box){
-    console.log(_box);
+    this.navCtrl.navigateForward("box-page/box-" + _box);
   }
 
 }
