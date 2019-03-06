@@ -7,8 +7,23 @@
 </ion-header>
 
 <ion-content padding>
-  <ion-button expand="block" color="primary" (click)="showPlatform()">
+  <!-- <ion-button expand="block" color="primary" (click)="showPlatform()">
     <ion-icon slot="start" name="star"></ion-icon>
     Where am I running?
-  </ion-button>
+  </ion-button> -->
+
+  <ion-card *ngFor = "let box of boxes" tappable (click) = "navigateToBoxLogs(box.id)">
+    <ion-card-header>
+      <ion-card-subtitle >{{box.product}} {{box.model}}</ion-card-subtitle>
+      <ion-card-title>{{box.name}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      State - {{box.state}}
+      <br>
+      Registred at {{box.registred}}
+    </ion-card-content>
+  </ion-card>
+
+
 </ion-content>
