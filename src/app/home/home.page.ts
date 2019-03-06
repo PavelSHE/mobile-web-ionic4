@@ -3,7 +3,8 @@ import { NavController, AlertController, Platform } from '@ionic/angular';
 import { AngularFireList, AngularFireDatabase } from "angularfire2/database";
 import { Observable } from 'rxjs';
 import { AngularFireAuth } from "angularfire2/auth";
-import * as moment from 'moment';
+
+
 
 @Component({
   selector: 'app-home',
