@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController, Platform } from '@ionic/angular';
-import { CottonSugarBox } from 'src/models/cottonsugarbox'
 import { AngularFireList, AngularFireDatabase } from "angularfire2/database";
 import { Observable } from 'rxjs';
 import { AngularFireAuth } from "angularfire2/auth";
@@ -40,7 +39,7 @@ export class HomePage {
         //to do data guards
       }
     });
-  } 
+  }
   
   showBoxes(data){
     this.boxes = data;
