@@ -140,7 +140,7 @@ export class BoxPagePage implements OnInit {
     }
     for (const [key, value] of Object.entries(this.chartData)) {
       //console.log(key, value["t"] ,value["h"]);
-      lineCharData.labels.push(moment.unix(+key).format('hh:mm'));
+      lineCharData.labels.push(moment.unix(+key).format('HH:mm'));
       lineCharData.datasets[0].data.push(Math.ceil(+value["t"]));
       lineCharData.datasets[1].data.push(Math.ceil(+value["h"]));
     }
