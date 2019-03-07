@@ -23,7 +23,7 @@ export class BoxPagePage implements OnInit {
   @ViewChild("valueBarsCanvasT") valueBarsCanvas;
   ValueBarChart: any;
 
-  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private alertCtrl: AlertController, private route: ActivatedRoute) { 
+  constructor(private afAuth: AngularFireAuth, private db: AngularFireDatabase, private alertCtrl: AlertController, private route: ActivatedRoute, public navCtrl: NavController) { 
     this.graphDataLimit = 6;
   }
 
@@ -59,6 +59,7 @@ export class BoxPagePage implements OnInit {
         // });
       } else {
         //to do data guards
+        this.navCtrl.navigateForward("login");
       }
     });
   }

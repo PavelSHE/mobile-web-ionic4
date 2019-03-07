@@ -37,6 +37,7 @@ export class HomePage {
         })
       }else{
         //to do data guards
+        this.navCtrl.navigateForward("login");
       }
     });
   }
