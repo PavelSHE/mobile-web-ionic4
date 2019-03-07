@@ -1,9 +1,22 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>BoxPage</ion-title>
+  <ion-toolbar color= "primary">
+    
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="home"></ion-back-button>
+      </ion-buttons>
+      <ion-title>BoxPage</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-
+  
+    <ion-card-header>Box Health</ion-card-header>
+    <ion-card-content>
+      <canvas #valueBarsCanvasT></canvas>
+    </ion-card-content>
+  
 </ion-content>
+
+<!-- <ion-footer>
+  <ion-button color="primary" expand="block" (click)="navButton()">Back</ion-button>
+</ion-footer> -->
